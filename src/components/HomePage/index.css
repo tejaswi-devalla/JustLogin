@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+}
+
+.bg-clr {
+  min-height: 100vh;
+  /*background: radial-gradient(
+    farthest-corner at 20% 90%,
+    rgb(247, 173, 218),
+    rgb(168, 136, 247)
+  );*/
+  background: radial-gradient(
+    circle at 100%,
+    #242582,
+    #242582 50%,
+    #eee 60%,
+    #242582 75%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.inside-cont {
+  position: relative;
+  display: flex;
+  align-self: flex-end;
+  margin-right: 15%;
+}
+.form-mail-input {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.form-control {
+  border-radius: 20px !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+.focused {
+  transition: transform 0.3s ease-in-out, box-shadow 0.1s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 12px 12px 12px black !important;
+}
+.box-shadow-none {
+  box-shadow: none !important;
+  border: 1px solid white !important;
+}
+.mail-text {
+  color: gray;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 55px;
+  height: 60px;
+  transform: translateY(-100%) translateX(0) scale(0);
+  background-size: cover;
+  animation: popUpArrow 0.5s ease-out forwards;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+}
+
+@keyframes popUpArrow {
+  0% {
+    transform: translateY(-50%) translateX(0) scale(0);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-50%) scale(1.1);
+  }
+  100% {
+    transform: translateY(-50.5%) translateX(20%);
+  }
+}
+.bubble {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: radial-gradient(circle, transparent 25%, #ffffff 100%);
+  border-radius: 50%;
+  animation: bubbleAnimation 5s linear infinite;
+}
+
+.bubble:nth-child(1) {
+  left: 5%;
+  width: 10px;
+  height: 10px;
+}
+
+.bubble:nth-child(2) {
+  left: 15%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 4s;
+}
+
+.bubble:nth-child(3) {
+  left: 30%;
+  width: 25px;
+  height: 25px;
+  animation-duration: 7s;
+}
+
+.bubble:nth-child(4) {
+  left: 50%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 6s;
+}
+
+.bubble:nth-child(5) {
+  left: 80%;
+  width: 28px;
+  height: 28px;
+  animation-duration: 5.5s;
+}
+.bubble:nth-child(6) {
+  left: 70%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 7.7s;
+}
+.bubble:nth-child(7) {
+  left: 95%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 4.5s;
+}
+
+@keyframes bubbleAnimation {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50vh) scale(1.1);
+  }
+  100% {
+    transform: translateY(-100vh) scale(0);
+    opacity: 0;
+  }
+}
